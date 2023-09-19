@@ -1,10 +1,10 @@
-# Releases with semantic-versioning
+## Releases with semantic-versioning
 
-## 1. Install the semantic-release on your local environment:
+ **1. Install the semantic-release on your local environment:**
      $ npm install --save-dev semantic-release
      $ npm install semantic-release @semantic-release/git @semantic-release/github -D
 
-## 2. Create a config file (release.config.js) in the project with the contents below:
+**2. Create a config file (release.config.js) in the project with the contents below:**
 ```   
 release.config.js
 ====================
@@ -20,18 +20,18 @@ plugins: [
  }
 ```
 
-## 3. Add your project to the repo:
+**3. Add your project to the repo:**
    
      git add .
 
-## 4. Commit your project to the repo using conventional commits. Your commit messages should start with:
+**4. Commit your project to the repo using conventional commits. Your commit messages should start with:**
 ```
    fix:                  ......for a patch version
    feat:                 ......for a minor version
    BREAKING CHANGE:      .......for a major version
 ```
 
-## 5. Add step in the CI workflow:
+**5. Add step in the CI workflow:**
 ```
 name: release workflow
 
@@ -64,7 +64,7 @@ jobs:
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
 ```
-## 6. After the code is pushed to the repo, trigger this workflow manually to publish and create a release version.
+**6. After the code is pushed to the repo, trigger this workflow manually to publish and create a release version.**
 
 ```
 - name: Create a release
